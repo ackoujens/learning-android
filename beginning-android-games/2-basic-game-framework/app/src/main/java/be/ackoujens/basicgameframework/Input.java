@@ -42,22 +42,22 @@ public interface Input {
     public boolean isKeyPressed(int keyCode);
 
     // Takes pointer, returns if corresponding finger is touching or not
-    public boolean isTouchDown(int pointer);
+    public boolean isTouchDown (int pointer);
 
     // Get x-position of active pointer
-    public int getTouchX(int pointer);
+    public int     getTouchX   (int pointer);
 
     // Get y-position of active pointer
-    public int getTouchY(int pointer);
+    public int     getTouchY   (int pointer);
 
     // Get acceleration value on the x-axis
-    public float getAccelX();
+    public float   getAccelX();
 
     // Get acceleration value on the y-axis
-    public float getAccelY();
+    public float   getAccelY();
 
     // Get acceleration value on the z-axis
-    public float getAccelZ();
+    public float   getAccelZ();
 
     /**
      * Used for event based handling
@@ -65,9 +65,9 @@ public interface Input {
      * - events are ordered according to when they occurred
      *  - newest event at the end of the list
      *  - oldest event at the start of the list
-     * @return
+     * @return List<KeyEvent>
      */
-    public List<KeyEvent> getKeyEvents();
+    public List<KeyEvent>   getKeyEvents();
 
     public List<TouchEvent> getTouchEvents();
 }
