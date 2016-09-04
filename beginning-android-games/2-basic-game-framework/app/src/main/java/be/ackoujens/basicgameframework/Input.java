@@ -3,7 +3,8 @@ package be.ackoujens.basicgameframework;
 import java.util.List;
 
 /**
- * Created by ackoujens on 04/09/16.
+ * Input
+ * polling access to the touchscreen, keyboard and accelerometer
  */
 public interface Input {
     /**
