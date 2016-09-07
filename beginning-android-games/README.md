@@ -63,3 +63,14 @@ public void update(float deltaTime) {
     x = 0;
 }
 ```
+
+## The Manifest File
+- `Activities` - user-facing components that present a UI for interaction
+- `Services` - processes that work in the background and don't have a visible UI
+- `Content providers` - makes parts of your application data available to other application
+- `Intents` - messages created by system or applications. Notify us of system events. (SD card removed, USB connected) Intents are also used for starting components of our application, such as activities. Opening photo gallery to display image, start camera app.
+- `Broadcast receivers` - React to specific intents, might execute an action. (starting specific activity, sending another intent to system)
+- Version of app as displayed and used on Google Play
+- Android versions compatible
+- HW profiles or requirements
+- Permissions for using specific components
