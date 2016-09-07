@@ -12,6 +12,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".LifeCycle" android:label="Life Cycle"     android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".SingleTouch" android:label="Single Touch" android:configChanges="keyboard|keyboardHidden|orientation" />
     </application>
 
 </manifest>
