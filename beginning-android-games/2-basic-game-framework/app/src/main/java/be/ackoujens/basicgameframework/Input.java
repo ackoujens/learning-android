@@ -38,36 +38,68 @@ public interface Input {
         public int pointer;
     }
 
-    // Takes keyCode, returns if corresponding key is pressed or not
+    /**
+     * Takes keyCode, returns if corresponding key is pressed or not
+     * @param keyCode
+     * @return boolean
+     */
     public boolean isKeyPressed(int keyCode);
 
-    // Takes pointer, returns if corresponding finger is touching or not
+    /**
+     * Takes pointer, returns if corresponding finger is touching or not
+     * @param pointer
+     * @return boolean
+     */
     public boolean isTouchDown (int pointer);
 
-    // Get x-position of active pointer
+    /**
+     * Get x-position of active pointer
+     * @param pointer
+     * @return x of pointer
+     */
     public int     getTouchX   (int pointer);
 
-    // Get y-position of active pointer
+    /**
+     * Get y-position of active pointer
+     * @param pointer
+     * @return y of pointer
+     */
     public int     getTouchY   (int pointer);
 
-    // Get acceleration value on the x-axis
+    /**
+     * Get acceleration value on the x-axis
+     * @return x acceleration
+     */
     public float   getAccelX();
 
-    // Get acceleration value on the y-axis
+    /**
+     * Get acceleration value on the y-axis
+     * @return y acceleration
+     */
     public float   getAccelY();
 
-    // Get acceleration value on the z-axis
+    /**
+     * Get acceleration value on the z-axis
+     * @return z acceleration
+     */
     public float   getAccelZ();
 
     /**
      * Used for event based handling
-     * - returns KeyEvent & TouchEvent instances that got recorded since last call
+     * - returns KeyEvent instances that got recorded since last call
      * - events are ordered according to when they occurred
      *  - newest event at the end of the list
      *  - oldest event at the start of the list
-     * @return List<KeyEvent>
+     * @return KeyEvent List
      */
     public List<KeyEvent>   getKeyEvents();
 
+    /**
+     * - returns TouchEvent instances that got recorded since last call
+     * - events are ordered according to when they occurred
+     *  - newest event at the end of the list
+     *  - oldest event at the start of the list
+     * @return TouchEvent List
+     */
     public List<TouchEvent> getTouchEvents();
 }
