@@ -47,3 +47,19 @@ Let's identify what tasks have to be performed by our game
   - paused
   - resumed
 - Framework will deal with setup
+
+## Frame Rate-Independent Movement
+When not applied, the game speed will be decided by the speed of your device.
+Which will make it that the application runs on different speeds on each device.
+
+**Solution:** instead of moving an object based on a fixed amount each frame, we specify the movement speed in units/s.
+
+Example of an object moving at 50px/s
+```java
+@override
+public void update(float deltaTime) {
+  x += 50 * deltaTime;
+  if (x > 100)
+    x = 0;
+}
+```
