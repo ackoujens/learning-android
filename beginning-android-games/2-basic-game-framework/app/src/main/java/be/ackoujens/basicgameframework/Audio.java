@@ -14,7 +14,7 @@ public interface Audio {
     public Music newMusic(String filename);
 
     /**
-     * Takes a filename and returns a SOund instance
+     * Takes a filename and returns a Sound instance
      * - throws IOException if file loading fails
      * @param filename
      * @return Sound
