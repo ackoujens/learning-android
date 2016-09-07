@@ -22,17 +22,12 @@ public class FrameworkTest extends Screen {
         awesomePic = game.getGraphics().newPixmap("data/pic.png", PixmapFormat.RGB565);
     }
 
-    
+
     @Override
     public void update(float deltaTime) {
         x += 1;
         if (x > 100)
             x = 0;
-        /*
-        x += 50 * deltatime;
-        if (x > 100)
-            x = 0;
-         */
     }
 
     @Override
