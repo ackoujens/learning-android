@@ -13,9 +13,21 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LifeCycle" android:label="Life Cycle"     android:configChanges="keyboard|keyboardHidden|orientation" />
-        <activity android:name=".SingleTouch" android:label="Single Touch" android:configChanges="keyboard|keyboardHidden|orientation" />
-        <activity android:name=".MultiTouch" android:label="Multi Touch"   android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".LifeCycle"         android:label="Life Cycle"          android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".SingleTouch"       android:label="Single Touch"        android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".MultiTouch"        android:label="Multi Touch"         android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".Key"               android:label="Key"                 android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".Accelerometer"     android:label="Accelerometer"       android:configChanges="keyboard|keyboardHidden|orientation" />
+        <!--<activity android:name=".Assets"            android:label="Assets"              android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".ExternalStorage"   android:label="External Storage"    android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".SoundPool"         android:label="Sound Pool"          android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".MediaPlayer"       android:label="Media Player"        android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".FullScreen"        android:label="Full Screen"         android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".RenderView"        android:label="Render View"         android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".Shape"             android:label="Shape"               android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".Bitmap"            android:label="Bitmap"              android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".Font"              android:label="Font"                android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".SurfaceView"       android:label="Surface View"        android:configChanges="keyboard|keyboardHidden|orientation" />-->
     </application>
 
 </manifest>
