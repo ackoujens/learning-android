@@ -15,6 +15,7 @@
 
         <activity android:name=".LifeCycle" android:label="Life Cycle"     android:configChanges="keyboard|keyboardHidden|orientation" />
         <activity android:name=".SingleTouch" android:label="Single Touch" android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".MultiTouch" android:label="Multi Touch"   android:configChanges="keyboard|keyboardHidden|orientation" />
     </application>
 
 </manifest>
