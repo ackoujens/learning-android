@@ -7,6 +7,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 /**
@@ -19,7 +20,17 @@ public class Accelerometer extends Activity implements SensorEventListener {
     SensorManager manager;
     boolean       useSensorData;
     String        sensorQuality;
+    int           screenRotation;
+    static final int ACCELEROMETER_AXIS_SWAP[][] = {
+                 {1,  -1, 0, 1},  // ROTATION_0
+                 {-1, -1, 1, 0},  // ROTATION_90
+                 {-1, 1,  0, 1},  // ROTATION_180
+                 {1,  1,  1, 0}}; // ROTATION_270
 
+    /**
+     * Create textview and setup accelerometer sensor if available
+     * @param savedInstanceState
+     */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         textView = new TextView(this);
@@ -42,19 +53,39 @@ public class Accelerometer extends Activity implements SensorEventListener {
     }
 
     /**
+     * Triggered when resumed
+     * - gets the screen rotation
+     */
+    public void onResume() {
+        super.onResume();
+        WindowManager windowManager = (WindowManager)this.getSystemService(Activity.WINDOW_SERVICE);
+        // getOrientation() is deprecated in Android 8 but is the same  as getRoation()
+        // which is the rotation from the natural orientation of the device
+        screenRotation = windowManager.getDefaultDisplay().getOrientation();
+    }
+
+    /**
      * Get sensor values and set to textView
      * - print all debug data here
+     * - using alternative accelerometer inputs
+     * - the inputs above stay accurate even when orientation changes
      * @param event
      */
     @Override
     public void onSensorChanged(SensorEvent event) {
+        // Corrected accelerometer values based on screen orientation
+        final int[] as = ACCELEROMETER_AXIS_SWAP[screenRotation];
+        float screenX = (float)as[0] * event.values[as[2]];
+        float screenY = (float)as[1] * event.values[as[3]];
+        float screenZ = event.values[2];
+
         builder.setLength(0);
         builder.append("x: ");
-        builder.append(event.values[0]);
+        builder.append(screenX);
         builder.append("y: ");
-        builder.append(event.values[1]);
+        builder.append(screenY);
         builder.append("z: ");
-        builder.append(event.values[2]);
+        builder.append(screenZ);
         builder.append("\n");
         builder.append("useSensorData: ");
         builder.append(useSensorData);
