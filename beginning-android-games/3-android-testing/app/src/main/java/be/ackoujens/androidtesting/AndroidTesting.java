@@ -22,6 +22,7 @@ public class AndroidTesting extends ListActivity {
                        "Accelerometer",
                        "Assets",
                        "ExternalStorage",
+                       "SharedPreference",
                        "SoundPool",
                        "MediaPlayer",
                        "FullScreen",
