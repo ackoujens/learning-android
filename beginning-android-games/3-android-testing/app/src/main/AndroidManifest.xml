@@ -26,8 +26,8 @@
         <activity android:name=".Sound"             android:label="Sound Pool"          android:configChanges="keyboard|keyboardHidden|orientation" />
         <activity android:name=".MusicPlayer"       android:label="Music Player"        android:configChanges="keyboard|keyboardHidden|orientation" />
         <activity android:name=".WakeLocks"         android:label="Wake Locks"          android:configChanges="keyboard|keyboardHidden|orientation"/>
-        <!--<activity android:name=".FullScreen"        android:label="Full Screen"         android:configChanges="keyboard|keyboardHidden|orientation" />
-        <activity android:name=".RenderView"        android:label="Render View"         android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".FullScreen"        android:label="Full Screen"         android:configChanges="keyboard|keyboardHidden|orientation" />
+        <!--<activity android:name=".RenderView"        android:label="Render View"         android:configChanges="keyboard|keyboardHidden|orientation" />
         <activity android:name=".Shape"             android:label="Shape"               android:configChanges="keyboard|keyboardHidden|orientation" />
         <activity android:name=".Bitmap"            android:label="Bitmap"              android:configChanges="keyboard|keyboardHidden|orientation" />
         <activity android:name=".Font"              android:label="Font"                android:configChanges="keyboard|keyboardHidden|orientation" />
