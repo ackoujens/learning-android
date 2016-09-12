@@ -82,8 +82,10 @@ public class Accelerometer extends Activity implements SensorEventListener {
         builder.setLength(0);
         builder.append("x: ");
         builder.append(screenX);
+        builder.append("\n");
         builder.append("y: ");
         builder.append(screenY);
+        builder.append("\n");
         builder.append("z: ");
         builder.append(screenZ);
         builder.append("\n");
