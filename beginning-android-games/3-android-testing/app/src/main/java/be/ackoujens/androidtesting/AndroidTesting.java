@@ -25,6 +25,7 @@ public class AndroidTesting extends ListActivity {
                        "SharedPreference",
                        "Sound",
                        "MusicPlayer",
+                       "WakeLocks",
                        "FullScreen",
                        "RenderView",
                        "Shape",
