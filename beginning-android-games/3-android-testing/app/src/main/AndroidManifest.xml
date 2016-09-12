@@ -28,8 +28,8 @@
         <activity android:name=".WakeLocks"         android:label="Wake Locks"          android:configChanges="keyboard|keyboardHidden|orientation"/>
         <activity android:name=".FullScreen"        android:label="Full Screen"         android:configChanges="keyboard|keyboardHidden|orientation" />
         <activity android:name=".CustomRenderView"  android:label="Custom Render View"  android:configChanges="keyboard|keyboardHidden|orientation" />
-        <!--<activity android:name=".Shape"             android:label="Shape"               android:configChanges="keyboard|keyboardHidden|orientation" />
-        <activity android:name=".Bitmap"            android:label="Bitmap"              android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name=".Shape"             android:label="Shape"               android:configChanges="keyboard|keyboardHidden|orientation" />
+        <!--<activity android:name=".Bitmap"            android:label="Bitmap"              android:configChanges="keyboard|keyboardHidden|orientation" />
         <activity android:name=".Font"              android:label="Font"                android:configChanges="keyboard|keyboardHidden|orientation" />
         <activity android:name=".SurfaceView"       android:label="Surface View"        android:configChanges="keyboard|keyboardHidden|orientation" />-->
     </application>
