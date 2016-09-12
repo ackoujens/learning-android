@@ -27,7 +27,7 @@ public class AndroidTesting extends ListActivity {
                        "MusicPlayer",
                        "WakeLocks",
                        "FullScreen",
-                       "RenderView",
+                       "CustomRenderView",
                        "Shape",
                        "Bitmap",
                        "Font",
