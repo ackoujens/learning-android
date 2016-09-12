@@ -1,0 +1,76 @@
+package be.ackoujens.androidtesting;
+
+import android.app.Activity;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import java.io.IOException;
+
+/**
+ * MediaPlayer
+ * playing music streams
+ */
+public class MusicPlayer extends Activity {
+    MediaPlayer mediaPlayer;
+
+    /**
+     * onCreate
+     * - bind to music stream
+     * - create a MediaPlayer
+     * - get asset from apk
+     * - set data source with additional required information
+     * - prepare track and switch to looping
+     * @param savedInstanceState
+     */
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        TextView textView = new TextView(this);
+        setContentView(textView);
+
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        mediaPlayer = new MediaPlayer();
+        try {
+            AssetManager assetManager = getAssets();
+            AssetFileDescriptor descriptor = assetManager.openFd("sound/music.ogg");
+            mediaPlayer.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+            mediaPlayer.prepare();
+            mediaPlayer.setLooping(true);
+        } catch (IOException e) {
+            textView.setText("Couldn't load music file, " + e.getMessage());
+            mediaPlayer = null;
+        }
+    }
+
+    /**
+     * OnResume
+     * - if mediaPlayer contains anything, play music
+     */
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mediaPlayer != null) {
+            mediaPlayer.start();
+        }
+    }
+
+    /**
+     * onPause
+     * - stop track
+     * - release resource
+     */
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (mediaPlayer != null) {
+            mediaPlayer.pause();
+            if (isFinishing()) {
+                mediaPlayer.stop();
+                mediaPlayer.release();
+            }
+        }
+    }
+}
