@@ -11,6 +11,12 @@ import android.widget.TextView;
  * make an activity full screen
  */
 public class FullScreen extends SingleTouch {
+    /**
+     * onCreate
+     * - setup full screen feature
+     * - proceed to create SingleTouch test
+     * @param savedInstanceState
+     */
     public void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
