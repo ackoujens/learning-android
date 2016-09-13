@@ -30,8 +30,8 @@
         <activity android:name=".CustomRenderView"  android:label="Custom Render View"  android:configChanges="keyboard|keyboardHidden|orientation" />
         <activity android:name=".Shape"             android:label="Shape"               android:configChanges="keyboard|keyboardHidden|orientation" />
         <activity android:name=".BitmapDraw"        android:label="BitmapDraw"          android:configChanges="keyboard|keyboardHidden|orientation" />
-        <!--<activity android:name=".Font"              android:label="Font"                android:configChanges="keyboard|keyboardHidden|orientation" />
-        <activity android:name=".SurfaceView"       android:label="Surface View"        android:configChanges="keyboard|keyboardHidden|orientation" />-->
+        <activity android:name=".Font"              android:label="Font"                android:configChanges="keyboard|keyboardHidden|orientation" />
+        <!--<activity android:name=".SurfaceView"       android:label="Surface View"        android:configChanges="keyboard|keyboardHidden|orientation" />-->
     </application>
 
 </manifest>
