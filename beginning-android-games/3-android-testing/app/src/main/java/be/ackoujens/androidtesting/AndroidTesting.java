@@ -31,7 +31,7 @@ public class AndroidTesting extends ListActivity {
                        "Shape",
                        "BitmapDraw",
                        "Font",
-                       "SurfaceView" };
+                       "SurfaceViewRender" };
 
     /**
      * Init application and populate it with tests
