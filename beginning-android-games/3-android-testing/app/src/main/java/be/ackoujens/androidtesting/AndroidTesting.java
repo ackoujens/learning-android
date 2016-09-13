@@ -29,7 +29,7 @@ public class AndroidTesting extends ListActivity {
                        "FullScreen",
                        "CustomRenderView",
                        "Shape",
-                       "Bitmap",
+                       "BitmapDraw",
                        "Font",
                        "SurfaceView" };
 
