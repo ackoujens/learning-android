@@ -84,25 +84,16 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getFragmentManager();
 
         if (id == R.id.nav_first_layout) {
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame,
-                            new FirstFragment())
-                    .commit();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new FirstFragment()).commit();
             Toast.makeText(this, "Switched to first fragment", Toast.LENGTH_SHORT).show();
 
 
         } else if (id == R.id.nav_second_layout) {
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame,
-                            new SecondFragment())
-                    .commit();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new SecondFragment()).commit();
             Toast.makeText(this, "Switched to second fragment", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_third_layout) {
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame,
-                            new ThirdFragment())
-                    .commit();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new ThirdFragment()).commit();
             Toast.makeText(this, "Switched to third fragment", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_share) {
