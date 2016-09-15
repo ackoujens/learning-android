@@ -1,3 +1,5 @@
 This sample text file is being opened by the AssetManager.
 After being opened, the delivered InputStream gets written to a byte array.
 LoadTextFile ends this process by returning a String which was made by converting the byteStream to an UTF8 byte array.
+
+This text file should be at ( /storage/emulated/0/text.txt )
