@@ -19,7 +19,7 @@ Obviously there are some steps to follow before calling it your own.
 3. Create a java class `ExampleFragment`
 4. Copy the template code from either `FirstFragment`, `SecondFragment` or `ThirdFragment`
 5. Alter the first argument of the inflate() method to the location of your layout (R.layout.<YOUR_LAYOUT_NAME>)
-6. In `MainActivity`, go to *onNavigationItemSelected* method and add your fragment in the same style as in the first 3 if statements
+6. In `MainActivity`, go to *onNavigationItemSelected* method and add your fragment in the same style as in the first three if statements
 
 
 ## Notes
