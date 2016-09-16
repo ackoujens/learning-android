@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by ackoujens on 15/09/16.
+ * SecondFragment
  */
 public class SecondFragment extends Fragment {
     View myView;
