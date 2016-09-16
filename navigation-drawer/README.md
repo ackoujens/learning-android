@@ -6,11 +6,14 @@ You can use this project as a base for your own project.
 Obviously there are some steps to follow before calling it your own.
 
 **AndroidManifest.xml**
+
 - `android:icon`: add your own app icon
 - `android:label`: shown title of your app
 - `android:name`: fill in the class where your app starts of
 
+
 **Creating fragments**
+
 1. Create your layout `example_layout.xml`
 2. Make your needed adjustments to the layout
 3. Create a java class `ExampleFragment`
